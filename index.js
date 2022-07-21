@@ -78,20 +78,20 @@ inquirer
     - [Usage](#usage)
     - [Credits](#credits)
     - [License](#license)
-    <a name="installation">
+    <a name="installation" />
     ## Installation
     ${answers.installationInstructions}
-    <a name="usage">
+    <a name="usage" />
     ## Usage
     ${answers.usageInfo}
     
     ## Credits
     ${answers.contributions}
-    <a name="tests">
+    <a name="tests" />
     ## Tests
     ${answers.tests}
 
-    <a name="license">
+    <a name="license" />
     ## License
     This application is covered by the ${answers.license} license. 
 
