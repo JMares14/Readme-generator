@@ -1,5 +1,5 @@
 #README Generator
-    ![badge](https://img.shields.io/badge/license-Apache_2.0-blue.svg)<br />
+    ![badge](https://img.shields.io/badge/license-Apache_2.0-blue.svg)
     
     #Description
     A command-line application that dynamically generatesa professinal README.md file from a users input using inquirer
@@ -24,7 +24,7 @@
 
     ## License
     [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]
-    <br />
+    
     This application is covered by the Apache_2.0 license. 
 
     ## Contact
