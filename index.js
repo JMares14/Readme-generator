@@ -78,22 +78,21 @@ inquirer
     - [Usage](#usage)
     - [Credits](#credits)
     - [License](#license)
-    
+    <a name="installation">
     ## Installation
     ${answers.installationInstructions}
-    
+    <a name="usage">
     ## Usage
     ${answers.usageInfo}
     
     ## Credits
     ${answers.contributions}
-    
+    <a name="tests">
     ## Tests
     ${answers.tests}
 
+    <a name="license">
     ## License
-    [![License](https://img.shields.io/badge/License-${answers.license}-blue.svg)]
-    <br />
     This application is covered by the ${answers.license} license. 
 
     ## Contact
