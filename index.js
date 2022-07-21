@@ -1,63 +1,114 @@
-// TODO: Include packages needed for this application
-const inquirer = require('inquirer');
-const fs = require('fs');
-// TODO: Create an array of questions for user input
+//Packages needed for this application
+const inquirer = require("inquirer");
+const fs = require("fs");
+const { title } = require("process");
+//Questions for user input
 
 inquirer
   .prompt([
     {
-      name: 'Title',
-      message: 'What is the title of your application?(Required)',
+      name: "title",
+      message: "What is the title of your application?(Required)",
     },
     {
-        name: 'Description',
-        message: 'What is the description of your application?(Required)',
-      },
-      {
-        name: 'Installation-Instructions',
-        message: 'List installation instructions, if any.',
-        default: ""
-      },
-      {
-        name: 'Usage-Info',
-        message: 'Provide instructions for use, if any.',
-        default: ""
-      },
-      {
-        name: 'Contributions',
-        message: 'List your collaborators, if any.',
-        default: ""
-      },
-      {
-        name: 'Tests',
-        message: 'Provide test for your project and examples on how to run them, if any.',
-        default: ""
-      },
-      {
-        type: 'checkbox',
-        name: 'License',
-        message: 'Please select a license for your aplication. Select all that apply.',
-        choices: ['MIT','GNU GPLv3','Apache','ISC','Boost Software','BSD 3-Clause','Creative Commons','Eclipse Public', 'Mozilla Public', 'Open Database', 'Perl', 'WTFPL'],
-      },
-      {
-        name: 'Github',
-        message: 'Enter your github username as a form of contact for any further questions involving yous application.(Required)',
-      },
-      {
-        name: 'Email',
-        message: 'Enter your github email as a form of contact for any further questions involving yous application.(Required)',
-      },
-
+      name: "description",
+      message: "What is the description of your application?(Required)",
+    },
+    {
+      name: "installationInstructions",
+      message: "List installation instructions, if any.",
+      default: "",
+    },
+    {
+      name: "usageInfo",
+      message: "Provide instructions for use, if any.",
+      default: "",
+    },
+    {
+      name: "contributions",
+      message: "List your collaborators, if any.",
+      default: "",
+    },
+    {
+      name: "tests",
+      message:
+        "Provide test for your project and examples on how to run them, if any.",
+      default: "",
+    },
+    {
+      type: "rawlist",
+      name: "license",
+      message:
+        "Please select a license for your aplication.",
+      choices: [
+        "Apache_2.0",
+        "Boost_1.0",
+        "CC0_1.0",
+        "EPL_1.0",
+        "GPLv3",
+        "IPL_1.0",
+        "ISC",
+        "MIT",
+        "MPL_2.0",
+        "Perl",
+        "WTFPL",
+        "Zlib",
+      ],
+    },
+    {
+      name: "github",
+      message:
+        "Enter your github username as a form of contact for any further questions involving yous application.(Required)",
+    },
+    {
+      name: "email",
+      message:
+        "Enter your github email as a form of contact for any further questions involving yous application.(Required)",
+    },
   ])
-  .then(answers => {
-    console.info('Answer:', answers);
+  .then((answers) => {
+    const template = `#${answers.title}
+    ![badge](https://img.shields.io/badge/license-${answers.license}-blue.svg)<br />
+    
+    #Description
+    ${answers.description}
+    
+    ## Table of Contents
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [Credits](#credits)
+    - [License](#license)
+    
+    ## Installation
+    ${answers.installationInstructions}
+    
+    ## Usage
+    ${answers.usageInfo}
+    
+    ## Credits
+    ${answers.contributions}
+    
+    ## Tests
+    ${answers.tests}
+
+    ## License
+    [![License](https://img.shields.io/badge/License-${answers.license}-blue.svg)]
+    <br />
+    This application is covered by the ${answers.license} license. 
+
+    ## Contact
+    Github: ${answers.github}     Email: ${answers.email}
+    `;
+    writeToFile(title, template);
   });
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+//function to write README file
+function writeToFile(fileName, data) {
+  fs.writeFile('README.md', data, function(err, result) {
+    if(err) console.log('error', err);
+    {
+      console.log("Your README has been generated")
+    }
+  });
+}
 
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
