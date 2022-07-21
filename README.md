@@ -1,5 +1,5 @@
 #README Generator
-    ![badge](https://img.shields.io/badge/license-Apache_2.0-blue.svg)<br />
+    ![badge](https://img.shields.io/badge/license-Apache_2.0-blue.svg)
     
     #Description
     A command-line application that dynamically generatesa professinal README.md file from a users input using inquirer
@@ -34,3 +34,4 @@
     <a name="contact">
     Github: JMares14     Email: georgemares14@yahoo.com
     
+Video Link: https://drive.google.com/file/d/1iGVmIMcmkJp7St8_EkEc58dJIA7fRs-N/view
