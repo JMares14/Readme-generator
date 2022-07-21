@@ -1,4 +1,6 @@
 #README Generator
+
+
     ![badge](https://img.shields.io/badge/license-Apache_2.0-blue.svg)
     
     #Description
@@ -23,7 +25,6 @@
     No test available
 
     ## License
-    ![badge](https://img.shields.io/badge/license-Apache_2.0-blue.svg)
     
     This application is covered by the Apache_2.0 license. 
 
