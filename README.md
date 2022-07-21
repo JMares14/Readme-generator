@@ -1,6 +1,4 @@
 #README Generator
-
-
     ![badge](https://img.shields.io/badge/license-Apache_2.0-blue.svg)
     
     #Description
